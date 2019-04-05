@@ -14,7 +14,7 @@ if(!exists($_POST['login']) || !exists($_POST['senha']) || !exists($_POST['token
 	die("formulário incompleto");
 }
 
-$c = new PDO("mysql:host=localhost;dbname=sistema_seguro","root","");
+$c = new PDO("mysql:host=localhost;dbname=morro_do_dende","root","");
 
 $s = $c->prepare("INSERT INTO tentativa (ip,login,post_token,session_token) VALUES(:ip, :login, :post_token, :session_token)");
 $s->bindValue(":ip",$_SERVER['REMOTE_ADDR']);
