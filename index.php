@@ -26,6 +26,7 @@ $_SESSION['token'] = md5("playstation2".time());
 <body>
 
 	<form id="loginForm" action="php/login.php" method="POST">
+		<h2>Morro do Dendê</h2>
 		<input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>">
 		<input type="text" name="login" placeholder="login">
 		<input type="password" name="senha" placeholder="senha">
